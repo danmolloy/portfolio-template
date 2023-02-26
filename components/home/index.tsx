@@ -10,9 +10,13 @@ export default function HomeComponent() {
     <div data-testid="home-component">
       <Hero />
       <ImageGallery />
+      <div className="lg:flex flex-row">
       <Posts />
+      <div className="flex flex-col">
       <SignUp />
       <WorkHistory />
+      </div>
+      </div>
     </div>
   )
 }

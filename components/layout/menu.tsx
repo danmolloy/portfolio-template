@@ -34,16 +34,16 @@ const menuLinks: {
 export default function Menu(props: MenuProps) {
   const { setShowMenu } = props
   return(
-    <div data-testid="menu-div">
-      <div>
-        <h2>Navigation</h2>
-        <button onClick={() => setShowMenu(false)} data-testid="close-btn">
+    <div className="shadow p-4 rounded-lg w-4/5 mt-16 absolute z-10 bg-white" data-testid="menu-div">
+      <div className="mb-2 flex flex-row justify-between">
+        <h2 className="text-slate-600 text-sm">Navigation</h2>
+        <button className="text-lg text-slate-600" onClick={() => setShowMenu(false)} data-testid="close-btn">
           <AiOutlineClose />
         </button>
       </div>
       {menuLinks.map(i => (
         <Link href={i.link} key={i.title}>
-          <p>{i.title}</p>
+          <p className="font-light border-b py-1 my-1 px-2">{i.title}</p>
         </Link>
       ))}
     </div>

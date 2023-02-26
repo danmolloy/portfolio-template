@@ -8,47 +8,47 @@ export const imageArr: {
   width: number
 }[] = [
   {
-    id: "img-one",
+    id: "0",
     title: "One beard",
-    src: "http://placebeard.it/200/200",
-    height: 150,
-    width: 150,
+    src: "http://placebeard.it/250/250",
+    height: 250,
+    width: 250,
   },
   {
-    id: "img-two",
+    id: "1",
     title: "Two beard",
     src: "http://placebeard.it/200/200",
-    height: 150,
-    width: 150,
+    height: 250,
+    width: 250,
   },
   {
-    id: "img-three",
+    id: "2",
     title: "Three beard",
-    src: "http://placebeard.it/200/200",
-    height: 150,
-    width: 150,
+    src: "http://placebeard.it/220/220",
+    height: 250,
+    width: 250,
   },
   {
-    id: "img-four",
+    id: "3",
     title: "Four beard",
-    src: "http://placebeard.it/200/200",
-    height: 150,
-    width: 150,
+    src: "http://placebeard.it/230/230",
+    height: 250,
+    width: 250,
   },
   {
-    id: "img-five",
+    id: "4",
     title: "Five beard",
-    src: "http://placebeard.it/200/200",
-    height: 150,
-    width: 150,
+    src: "http://placebeard.it/260/260",
+    height: 250,
+    width: 250,
   },
 ]
 
 export default function ImageGallery() {
   return (
-    <div data-testid="img-gallery-div">
+    <div className="flex flex-row" data-testid="img-gallery-div">
       {imageArr.map(i => (
-        <div key={i.id} data-testid={i.id}>
+        <div className={Number(i.id)%2 === 0 ? " rotate-6 m-2 rounded-lg overflow-hidden" : "rotate-left m-2 rounded-lg overflow-hidden"} key={i.id} data-testid={i.id}>
           <Image src={i.src} width={i.width} height={i.height} alt={i.title} title={i.title} />
         </div>
       ))}

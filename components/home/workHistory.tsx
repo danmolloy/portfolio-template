@@ -36,12 +36,12 @@ export const workArr: {
 
 export default function WorkHistory() {
   return (
-    <div data-testid="work-history-div">
-      <div>
+    <div className="flex flex-col border shadow-sm m-8 p-6 rounded-lg" data-testid="work-history-div">
+      <div className="flex flex-row items-center py-2">
         <div data-testid="work-icon">
           <MdWorkOutline />
         </div>
-        <h2>Work</h2>
+        <h2 className="ml-2 font-semibold">Work</h2>
       </div>
       <div data-testid="work-arr-div">
         {workArr.map(i => (
@@ -50,7 +50,7 @@ export default function WorkHistory() {
           </div>
         ))}
       </div>
-      <Link href="/" data-testid="cv-link">
+      <Link className="rounded bg-slate-50 hover:bg-slate-100 text-center p-2 text-sm " href="/" data-testid="cv-link">
         Download CV
       </Link>
     </div>
