@@ -14,7 +14,7 @@ export default function Layout(props: LayoutProps) {
     <div className="" data-testid="layout-div">
       <Header setShowMenu={() => setShowMenu(!showMenu)}/>
       {showMenu 
-      && <Menu />}
+      && <Menu setShowMenu={(arg) => setShowMenu(arg)}/>}
       <div data-testid="main-div">
         {children}
       </div>
