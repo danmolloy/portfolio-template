@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import Menu from "./menu";
+import Menu, { menuLinks } from "./menu";
 import { BsMoonStars, BsSun } from 'react-icons/bs'
 import Link from "next/link";
 
@@ -30,8 +30,16 @@ export default function Header(props: HeaderProps) {
         <Image src={"http://placebeard.it/200/200"} width={50} height={50} alt="Placeholder for a profile pic" title="Profile picture placeholder" />
       </Link>
       </div>
+      <div className="hidden md:flex border shadow-sm py-2 px-8 rounded-full flex-row">
+      {menuLinks.map(i => (
+        <Link className="text-slate-700 px-2 hover:text-emerald-500" href={i.link} key={i.title}>
+          {i.title}
+        </Link>
+      ))}
+
+      </div>
       <div className="mr-8 flex flex-row items-center">
-      <button className="hover:bg-slate-100 border shadow-sm rounded-full h-10 px-4 mx-2" data-testid="menu-btn" onClick={() => setShowMenu()}>
+      <button className="md:hidden text-slate-800 font-normal hover:bg-slate-100 border shadow-sm rounded-full h-10 px-4 mx-2" data-testid="menu-btn" onClick={() => setShowMenu()}>
         Menu
       </button>
       <button className="hover:bg-slate-100  border shadow-sm rounded-full text-xl h-10 px-4 mx-2" data-testid="night-toggle" onClick={() => handleToggle()}>

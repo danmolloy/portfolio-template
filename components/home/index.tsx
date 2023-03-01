@@ -12,7 +12,7 @@ export default function HomeComponent() {
       <ImageGallery />
       <div className="lg:flex flex-row">
       <Posts />
-      <div className="flex flex-col">
+      <div className="flex flex-col lg:my-16 my-8">
       <SignUp />
       <WorkHistory />
       </div>

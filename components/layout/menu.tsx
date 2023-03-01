@@ -5,7 +5,7 @@ interface MenuProps {
   setShowMenu: (arg: boolean) => void
 }
 
-const menuLinks: {
+export const menuLinks: {
   title: string
   link: string
 }[] = [
@@ -34,7 +34,7 @@ const menuLinks: {
 export default function Menu(props: MenuProps) {
   const { setShowMenu } = props
   return(
-    <div className="shadow p-4 rounded-lg w-4/5 mt-16 absolute z-10 bg-white" data-testid="menu-div">
+    <div className="shadow p-6 rounded-2xl w-5/6 mt-8 absolute z-10 bg-white" data-testid="menu-div">
       <div className="mb-2 flex flex-row justify-between">
         <h2 className="text-slate-600 text-sm">Navigation</h2>
         <button className="text-lg text-slate-600" onClick={() => setShowMenu(false)} data-testid="close-btn">
@@ -43,7 +43,7 @@ export default function Menu(props: MenuProps) {
       </div>
       {menuLinks.map(i => (
         <Link href={i.link} key={i.title}>
-          <p className="font-light border-b py-1 my-1 px-2">{i.title}</p>
+          <p className="font-light border-b py-2 my-1 px-2">{i.title}</p>
         </Link>
       ))}
     </div>

@@ -36,7 +36,7 @@ export const postsArr: {
 
 export default function Posts() {
   return (
-    <div data-testid="posts-div">
+    <div data-testid="posts-div" className="lg:w-3/4 my-16">
       {postsArr.map(i => (
         <div key={i.key}>
           <PostPreview post={i} />

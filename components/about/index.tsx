@@ -11,12 +11,16 @@ const aboutProps = {
 export default function About() {
   return (
     <div data-testid="about-div">
-      <Image data-testid="about-img" height={150} width={150} src="http://placebeard.it/200/200" alt="about me"/>
+      <Image className="rotate-3 rounded-lg ml-12 my-20" data-testid="about-img" height={250} width={250} src="http://placebeard.it/200/200" alt="about me"/>
       <PageHead {...aboutProps} />
       <SocialLinks />
-      <div data-testid="email-link">
+      <div className="border-t flex flex-row items-center mb-12 mx-3"  data-testid="email-link">
+        <div className="flex flex-row items-center text-slate-600">
+        <div className="text-xl py-4 mr-2">
         <AiOutlineMail />
+        </div>
         <p>email@email.com</p>
+        </div>
       </div>
     </div>
   )

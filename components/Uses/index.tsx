@@ -63,21 +63,21 @@ export default function UsesIndex() {
   return (
     <div data-testid="uses-index">
       <PageHead {...pageHeadProps} />
-      <div data-testid="workstation-div">
-        <h2>Workstation</h2>
+      <div data-testid="workstation-div" className="my-16">
+        <h2 className="m-4 font-semibold">Workstation</h2>
         {workstationArr.map(i => (
-          <div key={i.key}>
-            <h3>{i.title}</h3>
-            <p>{i.body}</p>
+          <div className="p-4" key={i.key}>
+            <h3 className="font-semibold text-slate-800 py-2">{i.title}</h3>
+            <p className="text-slate-700 text-sm">{i.body.slice(0, 90)}.</p>
           </div>
         ))}
       </div>
-      <div data-testid="devtools-div">
-          <h2>Dev Tools</h2>
+      <div data-testid="devtools-div" className="my-16">
+          <h2 className="m-4 font-semibold">Dev Tools</h2>
           {devToolsArr.map(i => (
-            <div key={i.key}>
-              <h3>{i.title}</h3>
-              <p>{i.body}</p>
+            <div className="p-4" key={i.key}>
+              <h3 className="font-semibold text-slate-800 py-2">{i.title}</h3>
+              <p className="text-slate-700 text-sm">{i.body.slice(0, 100)}.</p>
             </div>
           ))}
       </div>

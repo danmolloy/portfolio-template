@@ -35,13 +35,13 @@ const linksArr: {
 
 export default function SocialLinks() {
   return (
-    <div data-testid="social-links">
+    <div data-testid="social-links" className="">
       {linksArr.map(i => (
-        <div key={i.id} data-testid={i.id}>
-          <div>
+        <div className="flex flex-row items-center text-slate-600" key={i.id} data-testid={i.id}>
+          <div className="text-2xl p-2">
             {i.icon}
           </div>
-          <Link href={i.href}>{i.title}</Link>
+          <Link href={i.href} className="">{i.title}</Link>
         </div>
       ))}
     </div>

@@ -61,18 +61,18 @@ export const podcastsArr = [
 
 export default function Speaking() {
   return (
-    <div data-testid="speaking-div">
+    <div  data-testid="speaking-div" >
       <PageHead {...pageHeadProps} />
-      <div data-testid="conferences-div">
-        <h2>Conferences</h2>
+      <div data-testid="conferences-div" className="my-16">
+        <h2 className="font-semibold m-4">Conferences</h2>
         {conferencesArr.map(i => (
           <div key={i.key}>
             <SpeakingSection {...i} />
           </div>
         ))}
       </div>
-      <div data-testid="podcasts-div">
-        <h2>Podcasts</h2>
+      <div data-testid="podcasts-div" className="my-16">
+        <h2 className="font-semibold m-4">Podcasts</h2>
         {podcastsArr.map(i => (
           <div key={i.key}>
             <SpeakingSection {...i} />

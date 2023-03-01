@@ -48,9 +48,9 @@ export default function Projects() {
   return (
     <div data-testid="projects-index">
       <PageHead {...headInfo} />
-      <div>
+      <div className="flex flex-col">
         {projectsArr.map((i) => (
-          <div key={i.id}>
+          <div key={i.id} className="flex flex-row flex-wrap">
             <ProjectTile {...i} />
           </div>
         ))}
