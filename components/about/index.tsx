@@ -14,12 +14,12 @@ export default function About() {
       <Image className="rotate-3 rounded-lg ml-12 my-20" data-testid="about-img" height={250} width={250} src="http://placebeard.it/200/200" alt="about me"/>
       <PageHead {...aboutProps} />
       <SocialLinks />
-      <div className="border-t flex flex-row items-center mb-12 mx-3"  data-testid="email-link">
-        <div className="flex flex-row items-center text-slate-600">
-        <div className="text-xl py-4 mr-2">
+      <div className="border-t dark:border-zinc-700 flex flex-row items-center mb-12 mx-3 text-zinc-700 dark:text-zinc-400"  data-testid="email-link">
+        <div className="flex flex-row items-center ">
+        <div className="text-xl py-4 mr-2 ">
         <AiOutlineMail />
         </div>
-        <p>email@email.com</p>
+        <p className="">email@email.com</p>
         </div>
       </div>
     </div>

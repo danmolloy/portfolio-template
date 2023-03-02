@@ -61,23 +61,23 @@ export const devToolsArr = [
 
 export default function UsesIndex() {
   return (
-    <div data-testid="uses-index">
+    <div data-testid="uses-index" className="dark:text-zinc-400 text-zinc-700">
       <PageHead {...pageHeadProps} />
-      <div data-testid="workstation-div" className="my-16">
-        <h2 className="m-4 font-semibold">Workstation</h2>
+      <div data-testid="workstation-div" className="my-16 ">
+        <h2 className="m-4 font-semibold dark:text-zinc-100">Workstation</h2>
         {workstationArr.map(i => (
           <div className="p-4" key={i.key}>
-            <h3 className="font-semibold text-slate-800 py-2">{i.title}</h3>
-            <p className="text-slate-700 text-sm">{i.body.slice(0, 90)}.</p>
+            <h3 className="font-semibold text-zinc-900 py-2 dark:text-zinc-100">{i.title}</h3>
+            <p className=" text-sm">{i.body.slice(0, 90)}.</p>
           </div>
         ))}
       </div>
       <div data-testid="devtools-div" className="my-16">
-          <h2 className="m-4 font-semibold">Dev Tools</h2>
+          <h2 className="m-4 font-semibold text-zinc-900 dark:text-zinc-100">Dev Tools</h2>
           {devToolsArr.map(i => (
             <div className="p-4" key={i.key}>
-              <h3 className="font-semibold text-slate-800 py-2">{i.title}</h3>
-              <p className="text-slate-700 text-sm">{i.body.slice(0, 100)}.</p>
+              <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 py-2">{i.title}</h3>
+              <p className=" text-sm">{i.body.slice(0, 100)}.</p>
             </div>
           ))}
       </div>

@@ -35,9 +35,9 @@ const linksArr: {
 
 export default function SocialLinks() {
   return (
-    <div data-testid="social-links" className="">
+    <div data-testid="social-links" className="text-zinc-700 dark:text-zinc-400">
       {linksArr.map(i => (
-        <div className="flex flex-row items-center text-slate-600" key={i.id} data-testid={i.id}>
+        <div className="flex flex-row items-center " key={i.id} data-testid={i.id}>
           <div className="text-2xl p-2">
             {i.icon}
           </div>

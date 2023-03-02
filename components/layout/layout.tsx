@@ -15,7 +15,7 @@ export default function Layout(props: LayoutProps) {
       <Header showMenu={showMenu} setShowMenu={() => setShowMenu(!showMenu)}/>
       {showMenu 
       && <Menu setShowMenu={(arg) => setShowMenu(arg)}/>}
-      <div className={showMenu ? "blur saturate-50 body-width bg-white" : "dark:text-slate-300 dark:bg-gray-900 body-width bg-white"} data-testid="main-div">
+      <div className={showMenu ? "text-black dark:bg-zinc-900 blur saturate-50 body-width bg-white " : " dark:bg-zinc-900 body-width bg-white"} data-testid="main-div">
         {children}
       </div>
       <Footer />
