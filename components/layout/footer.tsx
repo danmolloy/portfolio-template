@@ -30,15 +30,15 @@ const footerLinks: {
 
 export default function Footer() {
   return (
-    <div className="body-width text-sm flex flex-row justify-evenly items-center h-32  border-t bg-white dark:bg-zinc-900 dark:border-zinc-700" data-testid="footer-div">
+    <div className="body-width text-sm flex lg:flex-row flex-col justify-evenly items-center h-32  border-t bg-white dark:bg-zinc-900 dark:border-zinc-700" data-testid="footer-div">
       <div className=" flex flex-row" data-testid="footer-links">
         {footerLinks.map(i => (
-          <Link className="hover:text-emerald-500 m-1 p-1 dark:text-zinc-300" href={i.link} key={i.id} data-testid={i.id}>
+          <Link className="hover:text-emerald-500 p-1 dark:text-zinc-300" href={i.link} key={i.id} data-testid={i.id}>
             {i.title}
           </Link>
         ))}
       </div>
-      <p className="font-light text-zinc-400 dark:text-zinc-500" data-testid="copyright-info">
+      <p className="font-light text-zinc-400 dark:text-zinc-500 " data-testid="copyright-info">
         Daniel Molloy 2023
       </p>
     </div>

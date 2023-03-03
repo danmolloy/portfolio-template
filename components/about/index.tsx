@@ -11,7 +11,7 @@ const aboutProps = {
 export default function About() {
   return (
     <div data-testid="about-div">
-      <Image className="rotate-3 rounded-lg ml-12 my-20" data-testid="about-img" height={250} width={250} src="http://placebeard.it/200/200" alt="about me"/>
+      <Image className="rotate-3 rounded-lg ml-12 my-8 lg:my-20" data-testid="about-img" height={250} width={250} src="http://placebeard.it/200/200" alt="about me"/>
       <PageHead {...aboutProps} />
       <SocialLinks />
       <div className="border-t dark:border-zinc-700 flex flex-row items-center mb-12 mx-3 text-zinc-700 dark:text-zinc-400"  data-testid="email-link">

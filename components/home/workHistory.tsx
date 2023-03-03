@@ -36,7 +36,7 @@ export const workArr: {
 
 export default function WorkHistory() {
   return (
-    <div className="dark:text-zinc-400 dark:border-zinc-700 flex flex-col border shadow-sm m-8 p-6 rounded-lg" data-testid="work-history-div">
+    <div className="dark:text-zinc-400 dark:border-zinc-700 flex flex-col border shadow-sm mx-1 my-4 p-4 rounded-lg" data-testid="work-history-div">
       <div className="flex flex-row items-center py-2">
         <div data-testid="work-icon" className="text-black">
           <MdWorkOutline />

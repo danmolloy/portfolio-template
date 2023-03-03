@@ -6,7 +6,7 @@ import { AiOutlineTwitter,
 
 export default function Hero() {
   return (
-    <div className=" px-4 py-12 my-16 w-full lg:w-2/3 text-zinc-700 dark:text-zinc-400" data-testid="hero-div">
+    <div className=" px-4 py-4 my-8 w-full lg:w-2/3 text-zinc-700 dark:text-zinc-400" data-testid="hero-div">
       <h1 className="dark:text-zinc-100 py-4 font-semibold text-5xl text-black" data-testid="hero-h1">
         Lorem ipsum dolor sit amet.
       </h1>

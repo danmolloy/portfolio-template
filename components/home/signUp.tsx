@@ -2,7 +2,7 @@ import { AiOutlineMail } from "react-icons/ai";
 
 export default function SignUp() {
   return (
-    <div className="shadow-xs border dark:border-zinc-700 p-4 m-8 rounded-lg text-slate-600 dark:text-zinc-400" data-testid="sign-up-div">
+    <div className="shadow-xs border dark:border-zinc-700 p-4 m-1 rounded-lg text-slate-600 dark:text-zinc-400" data-testid="sign-up-div">
       <div className="flex flex-row items-center text-black">
         <div className="" data-testid="mail-icon">
           <AiOutlineMail />

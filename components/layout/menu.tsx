@@ -34,7 +34,7 @@ export const menuLinks: {
 export default function Menu(props: MenuProps) {
   const { setShowMenu } = props
   return(
-    <div className="shadow p-6 rounded-2xl w-5/6 mt-8 absolute z-10 bg-white text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:border dark:border-zinc-800" data-testid="menu-div">
+    <div className="shadow p-6 rounded-2xl w-full mt-8 absolute z-10 bg-white text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:border dark:border-zinc-800" data-testid="menu-div">
       <div className="mb-2 flex flex-row justify-between dark:text-zinc-400">
         <h2 className=" text-sm">Navigation</h2>
         <button className="text-lg dark:hover:text-zinc-300" onClick={() => setShowMenu(false)} data-testid="close-btn">
