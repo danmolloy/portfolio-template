@@ -11,7 +11,7 @@ export default function Layout(props: LayoutProps) {
   const { children } = props
   const [showMenu, setShowMenu] = useState<boolean>(false)
   return (
-    <div className="dark:bg-black flex flex-col items-center w-screen bg-gray-50" data-testid="layout-div">
+    <div className="dark:bg-black overflow-hidden flex flex-col items-center w-screen bg-gray-50" data-testid="layout-div">
       <Header showMenu={showMenu} setShowMenu={() => setShowMenu(!showMenu)}/>
       {showMenu 
       && <Menu setShowMenu={(arg) => setShowMenu(arg)}/>}
