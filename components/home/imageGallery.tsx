@@ -48,10 +48,10 @@ export default function ImageGallery() {
   return (
     <div className="flex flex-row justify-center " data-testid="img-gallery-div">
       {imageArr.map(i => (
-/*         <div className={Number(i.id)%2 === 0 ? " rotate-6 m-2 rounded-lg overflow-hidden" : "rotate-left m-2 rounded-lg overflow-hidden"} key={i.id} data-testid={i.id}>
- */          <Image className={Number(i.id)%2 === 0 ? " rounded-lg rotate-6 m-2 " : "rounded-lg rotate-left m-2 "} src={i.src} width={i.width} height={i.height} alt={i.title} title={i.title} />
-/*         </div>
- */      ))}
+         /* <div key={i.id} data-testid={i.id}> */
+          <Image key={i.id} className={Number(i.id)%2 === 0 ? " rounded-lg rotate-6 m-2 " : "rounded-lg rotate-left m-2 "} src={i.src} width={i.width} height={i.height} alt={i.title} title={i.title} />
+         /* </div> */
+     ))}
     </div>
   )
 }
