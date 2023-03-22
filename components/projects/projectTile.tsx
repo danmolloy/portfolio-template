@@ -14,7 +14,7 @@ export default function ProjectTile(props: ProjectTileProps) {
   const { imgSrc, title, blurb, link } = props
 
   return (
-    <Link href={"/"} data-testid="project-tile" className="text-zinc-700 dark:text-zinc-400 hover:text-emerald-500 dark:hover:bg-zinc-800 w-1/2 md:w-1/3 hover:bg-slate-50 rounded-lg p-6">
+    <Link href={"/"} data-testid="project-tile" className="text-zinc-700 dark:text-zinc-400 hover:text-emerald-500 dark:hover:bg-zinc-800 w-full md:w-1/3 hover:bg-slate-50 rounded-lg p-6">
       <div className=" rounded-full overflow-hidden flex justify-center items-center p-1 shadow w-14 h-14">
         <Image className=" rounded-full overflow-hidden w-12 h-12" data-testid="project-img" src={imgSrc} width={50} height={50} alt={"Project preview"} title={title} />
       </div>
