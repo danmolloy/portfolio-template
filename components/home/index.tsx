@@ -6,6 +6,8 @@ import SignUp from "./signUp"
 import WorkHistory from "./workHistory"
 
 export default function HomeComponent() {
+  
+
   return (
     <div data-testid="home-component">
       <Hero />
