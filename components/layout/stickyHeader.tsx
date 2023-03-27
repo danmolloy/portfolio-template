@@ -30,8 +30,8 @@ export default function StickyHeader(props: HeaderProps) {
 
 
   return (
-    <div className="bg-white dark:bg-zinc-900 w-screen sm:body-width z-20 w-full flex flex-col  items-center">
-      <div className="pb-2 mt-2 sticky top-4 flex flex-row items-center justify-center ml-24 self-end md:self-center">
+    <div className=" bg-white dark:bg-zinc-900 w-full z-20 flex flex-col  items-center">
+      <div className=" w-1/2 pb-2 mt-2 sticky top-4 flex flex-row items-center justify-center ml-24 self-end md:self-center">
       <div className="border shadow-sm px-8 rounded-full hidden md:flex flex-row justify-evenly items-center text-slate-800 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-600">
         {menuLinks.map(i => (
           <Link className={String(router.pathname).slice(1) === i.title.toLowerCase() 
@@ -41,7 +41,7 @@ export default function StickyHeader(props: HeaderProps) {
           </Link>
         ))}
       </div>
-      <div className=" mr-8 flex flex-row ">
+      <div className=" flex flex-row ">
       <button className=" md:hidden text-slate-800 font-normal hover:bg-slate-100 dark:hover:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-600 border shadow-sm rounded-full h-10 px-4 mx-2" data-testid="menu-btn" onClick={() => setShowMenu()}>
         Menu
       </button>
@@ -57,8 +57,8 @@ export default function StickyHeader(props: HeaderProps) {
       </div>
       {router.pathname === "/"
       ? <div className={offset > 100 
-          ? "self-start mt-16 ml-12 rounded-full overflow-hidden flex items-center p-1 shadow" 
-          : " self-start mt-16 ml-12 rounded-full overflow-hidden flex items-center p-1"}>
+          ? " self-start mt-16 ml-2 sm:ml-12 rounded-full overflow-hidden flex items-center p-1 shadow" 
+          : " self-start mt-16 ml-2 sm:ml-12 rounded-full overflow-hidden flex items-center p-1"}>
         <Image className="rounded-full " src={"/images/dan-boat-close.jpg"} width={offsetFormula} height={offsetFormula} alt="Placeholder for a profile pic" title="Profile picture placeholder" />
       </div>
       : <Link href="/" className="absolute self-start top-2 ml-12 rounded-full overflow-hidden flex items-center p-1 shadow">

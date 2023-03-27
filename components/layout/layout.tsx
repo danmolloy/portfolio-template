@@ -27,7 +27,7 @@ export default function Layout(props: LayoutProps) {
 {/*       <Header offset={offset} showMenu={showMenu} setShowMenu={() => setShowMenu(!showMenu)}/>
  */}      {showMenu 
       && <Menu setShowMenu={(arg) => setShowMenu(arg)}/>}
-      <div className={showMenu ? "text-black dark:bg-zinc-900 blur saturate-50 w-screen sm:body-width bg-white" : " dark:bg-zinc-900 w-screen sm:body-width bg-white"} data-testid="main-div">
+      <div className={showMenu ? "text-black dark:bg-zinc-900 blur saturate-50 w-screen body-width bg-white" : " dark:bg-zinc-900 w-screen body-width  bg-white"} data-testid="main-div">
         {children}
       </div>
       <Footer />

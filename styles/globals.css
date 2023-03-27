@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.body-width {
-  width: calc(100% - 8vw)
+@media (min-width: 640px) {
+  .body-width {
+    width: calc(100% - 8vw)
+  }
 }
+
 
 .rotate-left {
 
