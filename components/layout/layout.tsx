@@ -24,8 +24,7 @@ export default function Layout(props: LayoutProps) {
   return (
     <div className=" w-screen min-h-screen bg-gray-50 dark:bg-black  items-center flex flex-col"/* " overflow-hidden flex flex-col items-center w-screen bg-gray-50" */ data-testid="layout-div">
       <StickyHeader offset={offset} showMenu={showMenu} setShowMenu={() => setShowMenu(!showMenu)}/>
-{/*       <Header offset={offset} showMenu={showMenu} setShowMenu={() => setShowMenu(!showMenu)}/>
- */}      {showMenu 
+      {showMenu 
       && <Menu setShowMenu={(arg) => setShowMenu(arg)}/>}
       <div className={showMenu ? "text-black dark:bg-zinc-900 blur saturate-50 w-screen body-width bg-white overflow-hidden" : " dark:bg-zinc-900 w-screen body-width  bg-white"} data-testid="main-div">
         {children}
