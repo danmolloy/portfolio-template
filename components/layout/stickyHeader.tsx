@@ -30,7 +30,7 @@ export default function StickyHeader(props: HeaderProps) {
 
 
   return (
-    <div className=" bg-white dark:bg-zinc-900 w-full z-20 flex flex-col  items-center">
+    <div className=" bg-white body-width dark:bg-zinc-900 w-full z-20 flex flex-col  items-center">
       <div className=" w-1/2 pb-2 mt-2 sticky top-4 flex flex-row items-center justify-center ml-24 self-end md:self-center">
       <div className="border shadow-sm px-8 rounded-full hidden md:flex flex-row justify-evenly items-center text-slate-800 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-600">
         {menuLinks.map(i => (

@@ -52,7 +52,7 @@ export const imageArr: {
 
 export default function ImageGallery() {
   return (
-    <div className=" flex flex-row justify-center " data-testid="img-gallery-div">
+    <div className=" flex flex-row justify-center overflow-hidden lg:overflow-visible" data-testid="img-gallery-div">
       {imageArr.map(i => (
             <Image key={i.id} className={` w-44 h-44 md:w-60 md:h-60 ${i.rotation} rounded-lg m-2`} src={i.src} width={200} height={200} alt={i.title} title={i.title} />
          /* <div key={i.id} data-testid={i.id}> */
