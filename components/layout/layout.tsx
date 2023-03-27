@@ -22,7 +22,7 @@ export default function Layout(props: LayoutProps) {
     }, []);
 
   return (
-    <div className=" w-screen min-h-screen bg-gray-50 dark:bg-black  items-center flex flex-col"/* " overflow-hidden flex flex-col items-center w-screen bg-gray-50" */ data-testid="layout-div">
+    <div className="overflow-hidden w-screen min-h-screen bg-gray-50 dark:bg-black  items-center flex flex-col"/* " overflow-hidden flex flex-col items-center w-screen bg-gray-50" */ data-testid="layout-div">
       <StickyHeader offset={offset} showMenu={showMenu} setShowMenu={() => setShowMenu(!showMenu)}/>
 {/*       <Header offset={offset} showMenu={showMenu} setShowMenu={() => setShowMenu(!showMenu)}/>
  */}      {showMenu 
