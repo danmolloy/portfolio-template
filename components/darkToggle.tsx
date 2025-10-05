@@ -6,22 +6,40 @@ export default function DarkToggle() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    /* 
-      Implement logic to set the initial theme based on localStorage 
-      and system preference (prefers-color-scheme). 
-      Also update `isDark` state accordingly.
-      See https://tailwindcss.com/docs/dark-mode
-     */
+    const savedTheme = localStorage.getItem('theme');
+
+    if(savedTheme){
+      if(savedTheme === 'dark'){
+        document.documentElement.classList.add('dark');
+        setIsDark(true);
+      }else{
+        document.documentElement.classList.remove('dark');
+        setIsDark(false);
+      }
+    }else{
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      if (prefersDark) {
+        document.documentElement.classList.add("dark");
+        setIsDark(true);
+      } else {
+        document.documentElement.classList.remove("dark");
+        setIsDark(false);
+      }
+    }
   }, []);
 
   const toggleTheme = () => {
-    /* 
-    Implement toggle between dark and light theme:
-      - Update `document.documentElement.classList`
-      - Persist theme choice in localStorage
-      - Update `isDark` state
-    */
-    setIsDark(!isDark);
+    if(isDark){
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setIsDark(false);
+    }else{
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setIsDark(true);
+    }
   };
 
   return (
